@@ -1,2 +1,6 @@
 # Hidden-Founders-FrontEnd-Challenge
-A serverless webapp that uses Angular, jquery, and bootstrap to render the most starred github repos in the last 30 days. | demo: https://hfchallenge.netlify.com
+
+Small/Simple webapp that lists the most starred github repos in the last 30 days.
+
+<h1>dependencies</h1>
+<a href='#'>hey</a>
