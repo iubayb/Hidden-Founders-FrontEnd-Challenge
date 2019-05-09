@@ -1,0 +1,69 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    .card-horizontal {
+        display: flex;
+        flex: 1 1 auto;
+    }
+    img{
+        width: 150px;
+    }
+    .container-fluid{
+        max-width: 1000px;
+    }
+    center small{
+        padding: 0 5% 0 5%;
+    }
+    body{
+        background-color: #0d2529;
+    }
+    h4{
+        color: #0d2529;
+    }
+    h1{
+        color: aliceblue;
+    }
+    .card{
+        box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+    }
+</style>
+</head>
+
+  <body>
+    <div ng-app='myApp' ng-controller='DemoController'>
+      <div infinite-scroll='ghRepo.nextPage()' infinite-scroll-disabled='ghRepo.busy' infinite-scroll-distance='1'> 
+        <div class="container-fluid">
+            <div class="row" ng-repeat='repo in ghRepo.repos'>
+                <div class="col-12 mt-3">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="img-square-wrapper">
+                                <img class="" src={{repo.owner.avatar_url}} alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <small class="text-muted">{{repo.owner.login}}</small>
+                                <h4 class="card-title">{{repo.name}}</h4>
+                                <p class="card-text">{{repo.description}}</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <center>
+                                <small class="text-muted"><b>Stars: </b>{{repo.stargazers_count}}</small>
+                                <small class="text-muted"><b>Issues: </b>{{repo.open_issues_count}}</small>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <br>
+          <div ng-show='ghRepo.busy'><center><h1>Loading data...</h1></center></div>
+      </div>
+    </div>
+  </body>
+    <script data-require="jquery@2.0.3" data-semver="2.0.3" src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="https://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+    <script src="https://rawgithub.com/BinaryMuse/ngInfiniteScroll/1.0.0/build/ng-infinite-scroll.min.js"></script>
+    <script src="script.js"></script>
+</html>
