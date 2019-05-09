@@ -14,5 +14,5 @@ demo : https://hfchallenge.netlify.com
 ngInfiniteScroll is a directive for AngularJS to evaluate an expression when the bottom of the directive's element approaches the bottom of the browser window, which can be used to implement infinite scrolling.\n
 <br>
 <b>An easy solution for an AngularJS cursor pagination.</b>
-<h2>How to run?!</h2>
+<h2>How to run it?!</h2>
 It's static..double click on index.html
