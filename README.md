@@ -15,4 +15,6 @@ ngInfiniteScroll is a directive for AngularJS to evaluate an expression when the
 <br>
 <b>An easy solution for an AngularJS cursor pagination.</b>
 <h2>How to run it?!</h2>
+<br>
+<br>
 It's static..double click on index.html
